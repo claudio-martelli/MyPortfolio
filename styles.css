@@ -628,23 +628,28 @@
 
 /* ── EXPERIENCE SECTION ── */
 .exp-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
   margin-top: 40px;
 }
 
 .exp-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 32px;
-  transition: border-color .25s ease, transform .25s ease;
+  position: relative;
+  display: flex;
+  background: linear-gradient(135deg, rgba(123,92,240,0.06), rgba(25,200,160,0.05));
+  border: 1px solid rgba(123,92,240,0.25);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(123,92,240,0.12);
+  overflow: hidden;
 }
 
-.exp-card:hover {
-  border-color: rgba(123, 92, 240, 0.4);
-  transform: translateY(-2px);
+.exp-accent-bar {
+  width: 6px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #7b5cf0, #19c8a0, #3baef5);
+}
+
+.exp-body {
+  padding: 32px 36px;
+  flex: 1;
 }
 
 .exp-header {
@@ -653,49 +658,58 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
-.exp-role { display: flex; flex-direction: column; gap: 4px; }
+.exp-role { display: flex; flex-direction: column; gap: 8px; }
 
 .exp-title {
   font-family: 'Sora', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
+  color: #2b2440;
 }
 
-.exp-contract {
+.exp-contract-badge,
+.exp-period-badge,
+.exp-sector-badge {
+  display: inline-block;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.82rem;
-  color: #19c8a0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.exp-contract-badge {
+  background: rgba(25,200,160,0.15);
+  color: #0f8a6f;
 }
 
 .exp-meta {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 4px;
-  text-align: right;
+  gap: 6px;
 }
 
-.exp-period {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  color: #f5a623;
+.exp-period-badge {
+  background: rgba(245,166,35,0.15);
+  color: #b5760f;
 }
 
-.exp-sector {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
-  opacity: 0.6;
+.exp-sector-badge {
+  background: rgba(59,174,245,0.15);
+  color: #1f7fb8;
 }
 
 .exp-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .exp-bullets {
@@ -709,10 +723,10 @@
 
 .exp-bullets li {
   position: relative;
-  padding-left: 20px;
-  font-size: 0.95rem;
+  padding-left: 22px;
+  font-size: 0.96rem;
   line-height: 1.6;
-  opacity: 0.85;
+  color: #423b57;
 }
 
 .exp-bullets li::before {
@@ -720,11 +734,13 @@
   position: absolute;
   left: 0;
   color: #7b5cf0;
+  font-weight: 700;
 }
 
 @media (max-width: 640px) {
+  .exp-body { padding: 24px 20px; }
   .exp-header { flex-direction: column; }
-  .exp-meta { align-items: flex-start; text-align: left; }
+  .exp-meta { align-items: flex-start; }
 }
 
   /* ──────────────────────────────────────────
