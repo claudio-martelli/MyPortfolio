@@ -357,11 +357,11 @@
     var(--coral),
     var(--violet)
   );
-    }
+    
   display: flex;
   align-items: center;
   justify-content: center;
-    
+  }
   .about-photo-initials {
     font-family: var(--serif);
     font-size: 4rem;
