@@ -342,6 +342,25 @@
     justify-content: center;
     position: relative;
   }
+  .about-photo-ring {
+  width: 286px;
+  height: 286px;
+  border-radius: 50%;
+  padding: 3px;
+  box-sizing: border-box;
+  background: conic-gradient(
+    from 180deg,
+    var(--violet),
+    var(--sky),
+    var(--teal),
+    var(--amber),
+    var(--coral),
+    var(--violet)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    
   .about-photo-initials {
     font-family: var(--serif);
     font-size: 4rem;
